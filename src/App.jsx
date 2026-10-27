@@ -2,10 +2,18 @@ import React, { useState } from 'react';
 import { 
   ShieldCheck, Cpu, Database, Network, Globe, Award, ExternalLink, 
   ChevronRight, Calculator, ShoppingBag, CheckCircle, Search, ArrowRight,
-  Layers, Lock, Server, FileText, CreditCard, RefreshCw, Terminal, Star
+  Layers, Lock, Server, FileText, CreditCard, RefreshCw, Terminal, Star, Wrench
 } from 'lucide-react';
 
 const SERVICES = [
+  {
+    id: 'pc-maintenance',
+    title: 'Manutenção de Computadores & Suporte',
+    category: 'Suporte Técnico',
+    priceGBP: 100,
+    desc: 'Reparação de PCs/Portáteis, remoção de vírus, otimização de sistema e assistência técnica local ou remota.',
+    features: ['Diagnóstico & Otimização', 'Remoção de Malware', 'Instalação de Software', 'Suporte Técnico Rápido']
+  },
   {
     id: 'ai-gen',
     title: 'Soluções de IA Generativa & Gemini',
@@ -131,7 +139,6 @@ export default function App() {
           </nav>
 
           <div className="flex items-center space-x-4">
-            {/* Seletor de Moeda */}
             <select 
               value={currency} 
               onChange={(e) => setCurrency(e.target.value)}
@@ -164,7 +171,6 @@ export default function App() {
         {/* INÍCIO (HOME) */}
         {activeTab === 'home' && (
           <div className="space-y-20">
-            {/* Hero Section */}
             <div className="text-center max-w-3xl mx-auto space-y-6 pt-8">
               <div className="inline-flex items-center space-x-2 bg-emerald-950/60 border border-emerald-500/30 rounded-full px-4 py-1.5 text-xs text-emerald-400 font-medium">
                 <Star className="w-3.5 h-3.5" />
@@ -174,7 +180,7 @@ export default function App() {
                 Engenharia de TI com Inovação em <span className="bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent">Google Cloud & IA</span>
               </h1>
               <p className="text-slate-400 text-lg sm:text-xl font-light leading-relaxed">
-                A <strong>SOLUÇÃO GLOBAL TECH GB</strong> foi criada no Reino Unido com uma forte ligação à Guiné-Bissau e alcance global. Fornecemos arquitetura de redes, cibersegurança em nuvem e soluções avançadas de Inteligência Artificial com padrões internacionais.
+                A <strong>SOLUÇÃO GLOBAL TECH GB</strong> foi criada no Reino Unido com uma forte ligação à Guiné-Bissau e alcance global. Fornecemos arquitetura de redes, cibersegurança em nuvem, manutenção e soluções avançadas de Inteligência Artificial com padrões internacionais.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
                 <button 
@@ -257,7 +263,7 @@ export default function App() {
           <div className="space-y-8">
             <div className="text-center max-w-2xl mx-auto space-y-3">
               <h1 className="text-3xl font-bold text-white">Catálogo de Serviços — SOLUÇÃO GLOBAL TECH GB</h1>
-              <p className="text-slate-400 text-sm">Selecione os serviços de que a sua empresa necessita e adicione ao seu pedido de orçamento instantâneo.</p>
+              <p className="text-slate-400 text-sm">Selecione os serviços de que a sua empresa ou projeto necessita e adicione ao seu pedido.</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -272,7 +278,7 @@ export default function App() {
                         </span>
                         <div className="text-right">
                           <span className="text-2xl font-black text-white">{currencySymbols[currency]}{convertPrice(service.priceGBP)}</span>
-                          <p className="text-[10px] text-slate-500">Estimativa base</p>
+                          <p className="text-[10px] text-slate-500">Valor base</p>
                         </div>
                       </div>
 
@@ -353,10 +359,8 @@ export default function App() {
               <p className="text-slate-400 text-sm">Configure os serviços e envie o seu pedido para a SOLUÇÃO GLOBAL TECH GB.</p>
             </div>
 
-            {/* Passos do Checkout */}
             {checkoutStep !== 4 && (
               <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-6">
-                {/* Seleção de Serviços se carrinho vazio */}
                 {cart.length === 0 ? (
                   <div className="text-center py-8 space-y-4">
                     <ShoppingBag className="w-12 h-12 text-slate-600 mx-auto" />
@@ -370,7 +374,6 @@ export default function App() {
                   </div>
                 ) : (
                   <form onSubmit={handleCheckoutSubmit} className="space-y-6">
-                    {/* Lista de Serviços Selecionados */}
                     <div className="space-y-3 border-b border-slate-800 pb-6">
                       <h3 className="text-sm font-semibold text-slate-300 uppercase tracking-wider">Serviços Selecionados</h3>
                       {cart.map(service => (
@@ -397,7 +400,6 @@ export default function App() {
                       </div>
                     </div>
 
-                    {/* Dados do Cliente */}
                     <div className="space-y-4">
                       <h3 className="text-sm font-semibold text-slate-300 uppercase tracking-wider">Dados do Cliente / Empresa</h3>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -430,7 +432,7 @@ export default function App() {
                             value={clientData.phone}
                             onChange={e => setClientData({...clientData, phone: e.target.value})}
                             className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
-                            placeholder="+245 ... / +44 ..."
+                            placeholder="+44 7404 550419"
                           />
                         </div>
                         <div>
@@ -451,12 +453,11 @@ export default function App() {
                           value={clientData.notes}
                           onChange={e => setClientData({...clientData, notes: e.target.value})}
                           className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
-                          placeholder="Descreva brevemente o seu projeto..."
+                          placeholder="Descreva brevemente o seu pedido..."
                         />
                       </div>
                     </div>
 
-                    {/* Método de Pagamento */}
                     <div className="space-y-3 border-t border-slate-800 pt-6">
                       <h3 className="text-sm font-semibold text-slate-300 uppercase tracking-wider">Método de Pagamento Preferencial</h3>
                       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
@@ -486,7 +487,6 @@ export default function App() {
               </div>
             )}
 
-            {/* Recibo / Confirmação do Pedido */}
             {checkoutStep === 4 && orderCreated && (
               <div className="bg-slate-900 border border-emerald-500/50 rounded-2xl p-8 space-y-6 text-center">
                 <div className="w-16 h-16 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center mx-auto">
@@ -506,7 +506,7 @@ export default function App() {
                 </div>
 
                 <p className="text-xs text-slate-400">
-                  Enviámos uma cópia de confirmação para o e-mail informado. A nossa equipa entrará em contacto nas próximas horas com a fatura e instruções de pagamento.
+                  Enviámos uma cópia de confirmação para o e-mail informado. A nossa equipa entrará em contacto nas próximas horas com a fatura e dados da Wise.
                 </p>
 
                 <div className="flex gap-4">
@@ -556,7 +556,7 @@ export default function App() {
 
             {foundOrder === 'NOT_FOUND' && (
               <div className="bg-red-950/40 border border-red-500/30 text-red-300 p-4 rounded-xl text-center text-sm">
-                Nenhum pedido encontrado com este código ou e-mail. Verifique o código e tente novamente.
+                Nenhum pedido encontrado com este código ou e-mail. Verifique os dados e tente novamente.
               </div>
             )}
 
