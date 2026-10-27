@@ -90,7 +90,7 @@ export default function App() {
       currency: currency,
       symbol: currencySymbols[currency],
       paymentMethod,
-      status: 'Aguardando Confirmacao'
+      status: 'Aguardando Confirmação'
     };
     setOrderCreated(newOrder);
     setCheckoutStep(4);
@@ -115,8 +115,10 @@ export default function App() {
               B
             </div>
             <div>
-              <span className="text-xl font-black tracking-wider text-white">BISSAU<span className="text-emerald-400">TECH</span></span>
-              <p className="text-[10px] text-slate-400 tracking-widest uppercase">Global IT & AI Solutions</p>
+              <span className="text-lg sm:text-xl font-black tracking-wider text-white">
+                BISSAU<span className="text-emerald-400">TECH</span>
+              </span>
+              <p className="text-[10px] text-emerald-400 font-semibold tracking-widest uppercase">Global Solutions</p>
             </div>
           </div>
 
@@ -166,13 +168,13 @@ export default function App() {
             <div className="text-center max-w-3xl mx-auto space-y-6 pt-8">
               <div className="inline-flex items-center space-x-2 bg-emerald-950/60 border border-emerald-500/30 rounded-full px-4 py-1.5 text-xs text-emerald-400 font-medium">
                 <Star className="w-3.5 h-3.5" />
-                <span>Especialistas em IA Generativa & Cloud Security</span>
+                <span>BISSAUTECH Global Solutions — Especialistas em IA & Cloud Security</span>
               </div>
               <h1 className="text-4xl sm:text-6xl font-black tracking-tight text-white leading-tight">
                 Engenharia de TI Global com Inovação em <span className="bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent">Google Cloud & IA</span>
               </h1>
               <p className="text-slate-400 text-lg sm:text-xl font-light leading-relaxed">
-                Fundada na Guiné-Bissau com alcance e padrões internacionais. Fornecemos arquitetura de redes, cibersegurança em nuvem e soluções avançadas de Inteligência Artificial para o mercado global.
+                A <strong>BISSAUTECH Global Solutions</strong> foi fundada na Guiné-Bissau com alcance e padrões internacionais. Fornecemos arquitetura de redes, cibersegurança em nuvem e soluções avançadas de Inteligência Artificial para o mercado global.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
                 <button 
@@ -218,7 +220,7 @@ export default function App() {
                 </div>
                 <h2 className="text-3xl font-bold text-white">Lavi Duarte Indeque</h2>
                 <p className="text-slate-400 text-sm leading-relaxed">
-                  Com formação internacional no Reino Unido (Leeds City College) e Marrocos (EPSIEL) e experiência sólida em instituições de referência como o Ecobank, Lavi combina conhecimento prático em redes e sistemas com certificações de topo em IA Generativa pela Google Cloud.
+                  Fundador da <strong>BISSAUTECH Global Solutions</strong>. Com formação internacional no Reino Unido (Leeds City College) e Marrocos (EPSIEL), aliada a uma sólida experiência prática no Ecobank, Lavi combina especialização em redes e infraestruturas críticas com certificações de topo em IA Generativa e Nuvem pela Google Cloud.
                 </p>
                 <div className="flex flex-wrap gap-2 pt-2">
                   <span className="bg-slate-800 text-slate-300 text-xs px-3 py-1 rounded-full border border-slate-700">Português (Nativo)</span>
@@ -254,7 +256,7 @@ export default function App() {
         {activeTab === 'services' && (
           <div className="space-y-8">
             <div className="text-center max-w-2xl mx-auto space-y-3">
-              <h1 className="text-3xl font-bold text-white">Catálogo de Serviços de TI & IA</h1>
+              <h1 className="text-3xl font-bold text-white">Catálogo de Serviços — BISSAUTECH Global Solutions</h1>
               <p className="text-slate-400 text-sm">Selecione os serviços de que a sua empresa necessita e adicione ao seu pedido de orçamento instantâneo.</p>
             </div>
 
@@ -321,7 +323,7 @@ export default function App() {
           <div className="space-y-8">
             <div className="text-center max-w-2xl mx-auto space-y-3">
               <h1 className="text-3xl font-bold text-white">Certificações Oficiais Google Cloud</h1>
-              <p className="text-slate-400 text-sm">Garantia técnica de rigor, inovação ética em IA e cibersegurança em ambientes cloud.</p>
+              <p className="text-slate-400 text-sm">Garantia técnica de rigor, inovação ética em IA e cibersegurança em ambientes cloud para os projetos da BISSAUTECH Global Solutions.</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -348,7 +350,7 @@ export default function App() {
           <div className="max-w-3xl mx-auto space-y-8">
             <div className="text-center space-y-2">
               <h1 className="text-3xl font-bold text-white">Novo Pedido / Solicitação de Serviço</h1>
-              <p className="text-slate-400 text-sm">Configure os serviços e envie o seu pedido com estimativa multimoeda instantânea.</p>
+              <p className="text-slate-400 text-sm">Configure os serviços e envie o seu pedido para a BISSAUTECH Global Solutions.</p>
             </div>
 
             {/* Passos do Checkout */}
@@ -491,7 +493,7 @@ export default function App() {
                   <CheckCircle className="w-10 h-10" />
                 </div>
                 <div className="space-y-2">
-                  <h2 className="text-2xl font-bold text-white">Pedido Registado com Sucesso!</h2>
+                  <h2 className="text-2xl font-bold text-white">Pedido Registado na BISSAUTECH Global Solutions!</h2>
                   <p className="text-slate-400 text-sm">O seu código de acompanhamento único é:</p>
                   <p className="text-3xl font-black text-emerald-400 tracking-wider font-mono">{orderCreated.id}</p>
                 </div>
@@ -598,7 +600,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="space-y-1 text-center md:text-left">
             <p className="text-slate-300 font-bold text-sm">BISSAUTECH Global Solutions</p>
-            <p>© 2026 BISSAUTECH. Todos os direitos reservados. Guiné-Bissau & Reino Unido.</p>
+            <p>© 2026 BISSAUTECH Global Solutions. Todos os direitos reservados. Guiné-Bissau & Reino Unido.</p>
           </div>
           <div className="flex space-x-6 text-slate-400">
             <span>Guiné-Bissau (Sede)</span>
