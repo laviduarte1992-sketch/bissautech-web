@@ -160,4 +160,457 @@ export default function App() {
       </header>
 
       {/* Conteúdo Dinâmico */}
-      <main
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* INÍCIO (HOME) */}
+        {activeTab === 'home' && (
+          <div className="space-y-20">
+            {/* Hero Section */}
+            <div className="text-center max-w-3xl mx-auto space-y-6 pt-8">
+              <div className="inline-flex items-center space-x-2 bg-emerald-950/60 border border-emerald-500/30 rounded-full px-4 py-1.5 text-xs text-emerald-400 font-medium">
+                <Star className="w-3.5 h-3.5" />
+                <span>SOLUÇÃO GLOBAL TECH GB — Especialistas em IA & Cloud Security</span>
+              </div>
+              <h1 className="text-4xl sm:text-6xl font-black tracking-tight text-white leading-tight">
+                Engenharia de TI com Inovação em <span className="bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent">Google Cloud & IA</span>
+              </h1>
+              <p className="text-slate-400 text-lg sm:text-xl font-light leading-relaxed">
+                A <strong>SOLUÇÃO GLOBAL TECH GB</strong> foi criada no Reino Unido com uma forte ligação à Guiné-Bissau e alcance global. Fornecemos arquitetura de redes, cibersegurança em nuvem e soluções avançadas de Inteligência Artificial com padrões internacionais.
+              </p>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                <button 
+                  onClick={() => setActiveTab('services')}
+                  className="w-full sm:w-auto bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-8 py-3.5 rounded-xl text-base transition-all flex items-center justify-center space-x-2 shadow-lg shadow-emerald-500/20"
+                >
+                  <span>Explorar Serviços</span>
+                  <ChevronRight className="w-5 h-5" />
+                </button>
+                <button 
+                  onClick={() => setActiveTab('checkout')}
+                  className="w-full sm:w-auto bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 font-medium px-8 py-3.5 rounded-xl text-base transition-all"
+                >
+                  Pedir Orçamento
+                </button>
+              </div>
+            </div>
+
+            {/* Destaque das Certificações */}
+            <div className="bg-slate-900/50 border border-slate-800 rounded-2xl p-8 backdrop-blur-sm">
+              <div className="text-center max-w-xl mx-auto mb-8 space-y-2">
+                <h2 className="text-2xl font-bold text-white">Competência Comprovada Google Cloud</h2>
+                <p className="text-slate-400 text-sm">6 Certificações Especializadas em Inteligência Artificial, LLMs, Cibersegurança e SDLC</p>
+              </div>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                {CERTIFICATIONS.map((cert, idx) => (
+                  <div key={idx} className="bg-slate-950 border border-slate-800/80 hover:border-emerald-500/50 transition-all p-4 rounded-xl flex items-start space-x-3">
+                    <span className="text-2xl">{cert.badge}</span>
+                    <div>
+                      <h3 className="font-semibold text-slate-200 text-sm">{cert.name}</h3>
+                      <p className="text-xs text-emerald-400 mt-1">{cert.org} • {cert.date}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Fundador e Credibilidade */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-800 rounded-2xl p-8">
+              <div className="space-y-4">
+                <div className="inline-block bg-emerald-500/10 text-emerald-400 text-xs font-semibold px-3 py-1 rounded-md">
+                  Liderança & Visão
+                </div>
+                <h2 className="text-3xl font-bold text-white">Lavi Duarte Indeque</h2>
+                <p className="text-slate-400 text-sm leading-relaxed">
+                  Fundador da <strong>SOLUÇÃO GLOBAL TECH GB</strong>. Com formação internacional no Reino Unido (Leeds City College) e Marrocos (EPSIEL), aliada a uma sólida experiência prática no Ecobank, Lavi combina especialização em redes e infraestruturas críticas com certificações de topo em IA Generativa e Nuvem pela Google Cloud.
+                </p>
+                <div className="flex flex-wrap gap-2 pt-2">
+                  <span className="bg-slate-800 text-slate-300 text-xs px-3 py-1 rounded-full border border-slate-700">Português (Nativo)</span>
+                  <span className="bg-slate-800 text-slate-300 text-xs px-3 py-1 rounded-full border border-slate-700">English (Fluente)</span>
+                  <span className="bg-slate-800 text-slate-300 text-xs px-3 py-1 rounded-full border border-slate-700">Français (Profissional)</span>
+                </div>
+              </div>
+              <div className="bg-slate-950/80 border border-slate-800 p-6 rounded-xl space-y-4">
+                <h3 className="text-lg font-bold text-emerald-400 flex items-center space-x-2">
+                  <Globe className="w-5 h-5" />
+                  <span>Presença Global & Conexão Bissau</span>
+                </h3>
+                <ul className="space-y-3 text-sm text-slate-300">
+                  <li className="flex items-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0" />
+                    <span>Criada e Operacional no Reino Unido (Leeds) para clientes internacionais</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0" />
+                    <span>Forte presença e apoio tecnológico dedicado ao mercado da Guiné-Bissau</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0" />
+                    <span>Faturação e pagamentos em GBP (£), EUR (€), USD ($) e CFA (XOF)</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* SERVIÇOS */}
+        {activeTab === 'services' && (
+          <div className="space-y-8">
+            <div className="text-center max-w-2xl mx-auto space-y-3">
+              <h1 className="text-3xl font-bold text-white">Catálogo de Serviços — SOLUÇÃO GLOBAL TECH GB</h1>
+              <p className="text-slate-400 text-sm">Selecione os serviços de que a sua empresa necessita e adicione ao seu pedido de orçamento instantâneo.</p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {SERVICES.map((service) => {
+                const inCart = cart.some(s => s.id === service.id);
+                return (
+                  <div key={service.id} className="bg-slate-900/60 border border-slate-800 hover:border-emerald-500/40 rounded-2xl p-6 transition-all flex flex-col justify-between">
+                    <div className="space-y-4">
+                      <div className="flex justify-between items-start">
+                        <span className="bg-emerald-950/80 text-emerald-400 text-xs font-semibold px-3 py-1 rounded-full border border-emerald-800/40">
+                          {service.category}
+                        </span>
+                        <div className="text-right">
+                          <span className="text-2xl font-black text-white">{currencySymbols[currency]}{convertPrice(service.priceGBP)}</span>
+                          <p className="text-[10px] text-slate-500">Estimativa base</p>
+                        </div>
+                      </div>
+
+                      <h3 className="text-xl font-bold text-white">{service.title}</h3>
+                      <p className="text-slate-400 text-sm leading-relaxed">{service.desc}</p>
+
+                      <ul className="space-y-2 pt-2">
+                        {service.features.map((feat, fIdx) => (
+                          <li key={fIdx} className="text-xs text-slate-300 flex items-center space-x-2">
+                            <CheckCircle className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                            <span>{feat}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div className="pt-6 border-t border-slate-800/80 mt-6">
+                      <button 
+                        onClick={() => toggleCartService(service)}
+                        className={`w-full py-2.5 rounded-xl text-sm font-bold transition-all flex items-center justify-center space-x-2 ${
+                          inCart 
+                            ? 'bg-emerald-950 border border-emerald-500 text-emerald-400' 
+                            : 'bg-emerald-500 hover:bg-emerald-400 text-slate-950 shadow-lg shadow-emerald-500/20'
+                        }`}
+                      >
+                        {inCart ? (
+                          <>
+                            <CheckCircle className="w-4 h-4" />
+                            <span>Adicionado ao Pedido</span>
+                          </>
+                        ) : (
+                          <>
+                            <ShoppingBag className="w-4 h-4" />
+                            <span>Adicionar ao Pedido</span>
+                          </>
+                        )}
+                      </button>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
+        {/* CERTIFICAÇÕES */}
+        {activeTab === 'certs' && (
+          <div className="space-y-8">
+            <div className="text-center max-w-2xl mx-auto space-y-3">
+              <h1 className="text-3xl font-bold text-white">Certificações Oficiais Google Cloud</h1>
+              <p className="text-slate-400 text-sm">Garantia técnica de rigor, inovação ética em IA e cibersegurança em ambientes cloud para os projetos da SOLUÇÃO GLOBAL TECH GB.</p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {CERTIFICATIONS.map((cert, idx) => (
+                <div key={idx} className="bg-slate-900 border border-slate-800 p-6 rounded-2xl flex items-start space-x-4">
+                  <div className="w-12 h-12 rounded-xl bg-slate-950 flex items-center justify-center text-2xl border border-slate-800 shrink-0">
+                    {cert.badge}
+                  </div>
+                  <div className="space-y-2">
+                    <h3 className="text-lg font-bold text-white">{cert.name}</h3>
+                    <p className="text-xs text-emerald-400 font-medium">{cert.org} • Emitido em {cert.date}</p>
+                    <p className="text-slate-400 text-xs leading-relaxed">
+                      Especialização verificada na plataforma de aprendizagem e desenvolvimento profissional Google Cloud.
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* CHECKOUT & PEDIDOS */}
+        {activeTab === 'checkout' && (
+          <div className="max-w-3xl mx-auto space-y-8">
+            <div className="text-center space-y-2">
+              <h1 className="text-3xl font-bold text-white">Novo Pedido / Solicitação de Serviço</h1>
+              <p className="text-slate-400 text-sm">Configure os serviços e envie o seu pedido para a SOLUÇÃO GLOBAL TECH GB.</p>
+            </div>
+
+            {/* Passos do Checkout */}
+            {checkoutStep !== 4 && (
+              <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-6">
+                {/* Seleção de Serviços se carrinho vazio */}
+                {cart.length === 0 ? (
+                  <div className="text-center py-8 space-y-4">
+                    <ShoppingBag className="w-12 h-12 text-slate-600 mx-auto" />
+                    <p className="text-slate-400 text-sm">Ainda não selecionou nenhum serviço.</p>
+                    <button 
+                      onClick={() => setActiveTab('services')}
+                      className="bg-emerald-500 text-slate-950 font-bold px-6 py-2.5 rounded-xl text-sm hover:bg-emerald-400 transition-all"
+                    >
+                      Ver Catálogo de Serviços
+                    </button>
+                  </div>
+                ) : (
+                  <form onSubmit={handleCheckoutSubmit} className="space-y-6">
+                    {/* Lista de Serviços Selecionados */}
+                    <div className="space-y-3 border-b border-slate-800 pb-6">
+                      <h3 className="text-sm font-semibold text-slate-300 uppercase tracking-wider">Serviços Selecionados</h3>
+                      {cart.map(service => (
+                        <div key={service.id} className="flex justify-between items-center bg-slate-950 p-3 rounded-xl border border-slate-800 text-sm">
+                          <div>
+                            <p className="font-semibold text-white">{service.title}</p>
+                            <p className="text-xs text-slate-500">{service.category}</p>
+                          </div>
+                          <div className="flex items-center space-x-3">
+                            <span className="font-bold text-emerald-400">{currencySymbols[currency]}{convertPrice(service.priceGBP)}</span>
+                            <button 
+                              type="button" 
+                              onClick={() => toggleCartService(service)}
+                              className="text-slate-500 hover:text-red-400 text-xs"
+                            >
+                              Remover
+                            </button>
+                          </div>
+                        </div>
+                      ))}
+                      <div className="flex justify-between items-center pt-2 font-bold text-lg text-white">
+                        <span>Total Estimado:</span>
+                        <span className="text-emerald-400">{currencySymbols[currency]}{convertPrice(totalGBP)}</span>
+                      </div>
+                    </div>
+
+                    {/* Dados do Cliente */}
+                    <div className="space-y-4">
+                      <h3 className="text-sm font-semibold text-slate-300 uppercase tracking-wider">Dados do Cliente / Empresa</h3>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                          <label className="block text-xs font-medium text-slate-400 mb-1">Nome Completo *</label>
+                          <input 
+                            required
+                            type="text" 
+                            value={clientData.name}
+                            onChange={e => setClientData({...clientData, name: e.target.value})}
+                            className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+                            placeholder="Ex: João Silva"
+                          />
+                        </div>
+                        <div>
+                          <label className="block text-xs font-medium text-slate-400 mb-1">E-mail de Contacto *</label>
+                          <input 
+                            required
+                            type="email" 
+                            value={clientData.email}
+                            onChange={e => setClientData({...clientData, email: e.target.value})}
+                            className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+                            placeholder="joao@empresa.com"
+                          />
+                        </div>
+                        <div>
+                          <label className="block text-xs font-medium text-slate-400 mb-1">Telefone / WhatsApp</label>
+                          <input 
+                            type="text" 
+                            value={clientData.phone}
+                            onChange={e => setClientData({...clientData, phone: e.target.value})}
+                            className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+                            placeholder="+245 ... / +44 ..."
+                          />
+                        </div>
+                        <div>
+                          <label className="block text-xs font-medium text-slate-400 mb-1">Empresa / Organização</label>
+                          <input 
+                            type="text" 
+                            value={clientData.company}
+                            onChange={e => setClientData({...clientData, company: e.target.value})}
+                            className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+                            placeholder="Nome da sua empresa"
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <label className="block text-xs font-medium text-slate-400 mb-1">Notas do Projeto / Requisitos Adicionais</label>
+                        <textarea 
+                          rows={3}
+                          value={clientData.notes}
+                          onChange={e => setClientData({...clientData, notes: e.target.value})}
+                          className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+                          placeholder="Descreva brevemente o seu projeto..."
+                        />
+                      </div>
+                    </div>
+
+                    {/* Método de Pagamento */}
+                    <div className="space-y-3 border-t border-slate-800 pt-6">
+                      <h3 className="text-sm font-semibold text-slate-300 uppercase tracking-wider">Método de Pagamento Preferencial</h3>
+                      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                        <label className={`border p-3 rounded-xl flex items-center space-x-3 cursor-pointer text-sm ${paymentMethod === 'card' ? 'border-emerald-500 bg-emerald-950/30' : 'border-slate-800 bg-slate-950'}`}>
+                          <input type="radio" name="payment" checked={paymentMethod === 'card'} onChange={() => setPaymentMethod('card')} className="accent-emerald-500" />
+                          <span>Cartão / Stripe</span>
+                        </label>
+                        <label className={`border p-3 rounded-xl flex items-center space-x-3 cursor-pointer text-sm ${paymentMethod === 'transfer' ? 'border-emerald-500 bg-emerald-950/30' : 'border-slate-800 bg-slate-950'}`}>
+                          <input type="radio" name="payment" checked={paymentMethod === 'transfer'} onChange={() => setPaymentMethod('transfer')} className="accent-emerald-500" />
+                          <span>Transferência / Wise</span>
+                        </label>
+                        <label className={`border p-3 rounded-xl flex items-center space-x-3 cursor-pointer text-sm ${paymentMethod === 'crypto' ? 'border-emerald-500 bg-emerald-950/30' : 'border-slate-800 bg-slate-950'}`}>
+                          <input type="radio" name="payment" checked={paymentMethod === 'crypto'} onChange={() => setPaymentMethod('crypto')} className="accent-emerald-500" />
+                          <span>Crypto (USDT/BTC)</span>
+                        </label>
+                      </div>
+                    </div>
+
+                    <button 
+                      type="submit"
+                      className="w-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold py-3.5 rounded-xl text-base transition-all shadow-lg shadow-emerald-500/20"
+                    >
+                      Confirmar e Finalizar Pedido
+                    </button>
+                  </form>
+                )}
+              </div>
+            )}
+
+            {/* Recibo / Confirmação do Pedido */}
+            {checkoutStep === 4 && orderCreated && (
+              <div className="bg-slate-900 border border-emerald-500/50 rounded-2xl p-8 space-y-6 text-center">
+                <div className="w-16 h-16 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center mx-auto">
+                  <CheckCircle className="w-10 h-10" />
+                </div>
+                <div className="space-y-2">
+                  <h2 className="text-2xl font-bold text-white">Pedido Registado na SOLUÇÃO GLOBAL TECH GB!</h2>
+                  <p className="text-slate-400 text-sm">O seu código de acompanhamento único é:</p>
+                  <p className="text-3xl font-black text-emerald-400 tracking-wider font-mono">{orderCreated.id}</p>
+                </div>
+
+                <div className="bg-slate-950 p-4 rounded-xl text-left space-y-2 text-xs text-slate-300 border border-slate-800">
+                  <p><strong>Cliente:</strong> {orderCreated.client.name} ({orderCreated.client.email})</p>
+                  <p><strong>Total:</strong> {orderCreated.symbol}{orderCreated.totalAmount} ({orderCreated.currency})</p>
+                  <p><strong>Estado:</strong> <span className="text-amber-400 font-semibold">{orderCreated.status}</span></p>
+                  <p><strong>Data:</strong> {orderCreated.date}</p>
+                </div>
+
+                <p className="text-xs text-slate-400">
+                  Enviámos uma cópia de confirmação para o e-mail informado. A nossa equipa entrará em contacto nas próximas horas com a fatura e instruções de pagamento.
+                </p>
+
+                <div className="flex gap-4">
+                  <button 
+                    onClick={() => { setCart([]); setCheckoutStep(1); setActiveTab('home'); }}
+                    className="w-full bg-slate-800 hover:bg-slate-700 text-white font-bold py-3 rounded-xl text-sm transition-all"
+                  >
+                    Voltar ao Início
+                  </button>
+                  <button 
+                    onClick={() => setActiveTab('track')}
+                    className="w-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold py-3 rounded-xl text-sm transition-all"
+                  >
+                    Acompanhar Pedido
+                  </button>
+                </div>
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* ACOMPANHAR PEDIDO */}
+        {activeTab === 'track' && (
+          <div className="max-w-2xl mx-auto space-y-8">
+            <div className="text-center space-y-2">
+              <h1 className="text-3xl font-bold text-white">Acompanhar Estado do Pedido</h1>
+              <p className="text-slate-400 text-sm">Insira o seu ID de Pedido (ex: SGT-123456) ou o e-mail associado para consultar o progresso.</p>
+            </div>
+
+            <form onSubmit={handleSearchOrder} className="flex gap-3">
+              <input 
+                required
+                type="text" 
+                value={searchOrderId}
+                onChange={e => setSearchOrderId(e.target.value)}
+                className="flex-1 bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+                placeholder="ID do Pedido (ex: SGT-123456) ou E-mail"
+              />
+              <button 
+                type="submit"
+                className="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-6 py-3 rounded-xl text-sm transition-all flex items-center space-x-2"
+              >
+                <Search className="w-4 h-4" />
+                <span>Pesquisar</span>
+              </button>
+            </form>
+
+            {foundOrder === 'NOT_FOUND' && (
+              <div className="bg-red-950/40 border border-red-500/30 text-red-300 p-4 rounded-xl text-center text-sm">
+                Nenhum pedido encontrado com este código ou e-mail. Verifique o código e tente novamente.
+              </div>
+            )}
+
+            {foundOrder && foundOrder !== 'NOT_FOUND' && (
+              <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4">
+                <div className="flex justify-between items-center border-b border-slate-800 pb-4">
+                  <div>
+                    <span className="text-xs text-slate-500">ID do Pedido</span>
+                    <h3 className="text-lg font-bold text-white font-mono">{foundOrder.id}</h3>
+                  </div>
+                  <span className="bg-amber-500/10 text-amber-400 border border-amber-500/30 text-xs px-3 py-1 rounded-full font-medium">
+                    {foundOrder.status}
+                  </span>
+                </div>
+
+                <div className="space-y-2 text-sm text-slate-300">
+                  <p><strong>Cliente:</strong> {foundOrder.client.name}</p>
+                  <p><strong>Data:</strong> {foundOrder.date}</p>
+                  <p><strong>Valor Total:</strong> {foundOrder.symbol}{foundOrder.totalAmount} ({foundOrder.currency})</p>
+                </div>
+
+                <div className="pt-2">
+                  <p className="text-xs font-semibold text-slate-400 mb-2">Serviços Contratados:</p>
+                  <div className="space-y-1">
+                    {foundOrder.services.map((s, idx) => (
+                      <div key={idx} className="bg-slate-950 p-2.5 rounded-lg text-xs text-slate-300 flex justify-between">
+                        <span>{s.title}</span>
+                        <span className="text-emerald-400">{s.category}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        )}
+      </main>
+
+      {/* Footer */}
+      <footer className="border-t border-slate-800/80 bg-slate-950 mt-20 py-12 text-xs text-slate-500">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="space-y-1 text-center md:text-left">
+            <p className="text-slate-300 font-bold text-sm">SOLUÇÃO GLOBAL TECH GB</p>
+            <p>© 2026 SOLUÇÃO GLOBAL TECH GB. Todos os direitos reservados. Reino Unido & Guiné-Bissau.</p>
+          </div>
+          <div className="flex space-x-6 text-slate-400">
+            <span>Leeds, UK (Operacional)</span>
+            <span>•</span>
+            <span>Guiné-Bissau</span>
+            <span>•</span>
+            <span>+44 7404 550419</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
