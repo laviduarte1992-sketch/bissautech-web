@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { 
   ShieldCheck, Cpu, Database, Network, Globe, Award, ExternalLink, 
   ChevronRight, Calculator, ShoppingBag, CheckCircle, Search, ArrowRight,
-  Layers, Lock, Server, FileText, CreditCard, RefreshCw, Terminal, Star, Wrench
+  Layers, Lock, Server, FileText, CreditCard, RefreshCw, Terminal, Star, Wrench,
+  Mail, Phone, MapPin, MessageSquare
 } from 'lucide-react';
 
 const SERVICES = [
@@ -150,6 +151,16 @@ export default function App() {
               <option value="XOF">CFA XOF (África)</option>
             </select>
 
+            <a 
+              href="https://wa.me/447404550419" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hidden lg:flex items-center space-x-1.5 bg-slate-900 hover:bg-slate-800 text-emerald-400 border border-emerald-500/30 font-semibold px-3 py-1.5 rounded-xl text-xs transition-all"
+            >
+              <Phone className="w-3.5 h-3.5" />
+              <span>+44 7404 550419</span>
+            </a>
+
             <button 
               onClick={() => setActiveTab('checkout')}
               className="relative bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-4 py-2 rounded-xl text-sm transition-all flex items-center space-x-2 shadow-lg shadow-emerald-500/20"
@@ -224,7 +235,7 @@ export default function App() {
                 <div className="inline-block bg-emerald-500/10 text-emerald-400 text-xs font-semibold px-3 py-1 rounded-md">
                   Liderança & Visão
                 </div>
-                <h2 className="text-3xl font-bold text-white">Lavi Duarte Indeque</h2>
+                <h2 className="text-3xl font-bold text-white">Engenheiro Lavi Duarte Indeque</h2>
                 <p className="text-slate-400 text-sm leading-relaxed">
                   Fundador da <strong>SOLUÇÃO GLOBAL TECH GB</strong>. Com formação internacional no Reino Unido (Leeds City College) e Marrocos (EPSIEL), aliada a uma sólida experiência prática no Ecobank, Lavi combina especialização em redes e infraestruturas críticas com certificações de topo em IA Generativa e Nuvem pela Google Cloud.
                 </p>
@@ -595,20 +606,64 @@ export default function App() {
         )}
       </main>
 
-      {/* Footer */}
-      <footer className="border-t border-slate-800/80 bg-slate-950 mt-20 py-12 text-xs text-slate-500">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="space-y-1 text-center md:text-left">
-            <p className="text-slate-300 font-bold text-sm">SOLUÇÃO GLOBAL TECH GB</p>
-            <p>© 2026 SOLUÇÃO GLOBAL TECH GB. Todos os direitos reservados. Reino Unido & Guiné-Bissau.</p>
+      {/* Footer com Contactos Diretos */}
+      <footer className="border-t border-slate-800/80 bg-slate-950 mt-20 py-16 text-xs text-slate-400">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          
+          {/* Blocos de Contacto Directo */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pb-10 border-b border-slate-800/80">
+            <div className="bg-slate-900/60 border border-slate-800/80 p-6 rounded-2xl space-y-3">
+              <div className="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center">
+                <Phone className="w-5 h-5" />
+              </div>
+              <h4 className="font-bold text-white text-sm">Telefone & WhatsApp</h4>
+              <p className="text-xs text-slate-400">Atendimento rápido e esclarecimento de dúvidas:</p>
+              <a 
+                href="https://wa.me/447404550419" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block text-emerald-400 font-semibold hover:underline text-sm"
+              >
+                +44 7404 550419
+              </a>
+            </div>
+
+            <div className="bg-slate-900/60 border border-slate-800/80 p-6 rounded-2xl space-y-3">
+              <div className="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center">
+                <Mail className="w-5 h-5" />
+              </div>
+              <h4 className="font-bold text-white text-sm">E-mails Profissionais</h4>
+              <p className="text-xs text-slate-400">Envie-nos propostas, detalhes de projetos ou faturas:</p>
+              <div className="space-y-1 font-mono text-xs">
+                <a href="mailto:laviduarte199@gmail.com" className="block text-emerald-400 hover:underline">laviduarte199@gmail.com</a>
+                <a href="mailto:laviduarte1@gmail.com" className="block text-emerald-400 hover:underline">laviduarte1@gmail.com</a>
+              </div>
+            </div>
+
+            <div className="bg-slate-900/60 border border-slate-800/80 p-6 rounded-2xl space-y-3">
+              <div className="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center">
+                <MapPin className="w-5 h-5" />
+              </div>
+              <h4 className="font-bold text-white text-sm">Sede Operacional</h4>
+              <p className="text-xs text-slate-400">Engenheiro Lavi Duarte Indeque</p>
+              <p className="text-slate-300 text-xs font-medium">32 Conway Place, LS8 5HT, Leeds, UK</p>
+            </div>
           </div>
-          <div className="flex space-x-6 text-slate-400">
-            <span>Leeds, UK (Operacional)</span>
-            <span>•</span>
-            <span>Guiné-Bissau</span>
-            <span>•</span>
-            <span>+44 7404 550419</span>
+
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-slate-500">
+            <div className="space-y-1 text-center md:text-left">
+              <p className="text-slate-300 font-bold text-sm">SOLUÇÃO GLOBAL TECH GB</p>
+              <p>© 2026 SOLUÇÃO GLOBAL TECH GB. Todos os direitos reservados. Reino Unido & Guiné-Bissau.</p>
+            </div>
+            <div className="flex space-x-6 text-slate-400">
+              <span>Leeds, UK</span>
+              <span>•</span>
+              <span>Guiné-Bissau</span>
+              <span>•</span>
+              <a href="https://wa.me/447404550419" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-400">WhatsApp Directo</a>
+            </div>
           </div>
+
         </div>
       </footer>
     </div>
