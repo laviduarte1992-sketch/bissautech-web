@@ -80,7 +80,7 @@ export default function App() {
 
   const handleCheckoutSubmit = (e) => {
     e.preventDefault();
-    const orderId = 'GST-' + Math.floor(100000 + Math.random() * 900000);
+    const orderId = 'SGT-' + Math.floor(100000 + Math.random() * 900000);
     const newOrder = {
       id: orderId,
       date: new Date().toLocaleDateString('pt-PT'),
@@ -112,13 +112,13 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           <div className="flex items-center space-x-3 cursor-pointer" onClick={() => setActiveTab('home')}>
             <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-400 flex items-center justify-center font-bold text-slate-950 text-xl shadow-lg shadow-emerald-500/20">
-              G
+              S
             </div>
             <div>
-              <span className="text-lg sm:text-xl font-black tracking-wider text-white">
-                GLOBAL SOLUÇÃO <span className="text-emerald-400">TECH GB</span>
+              <span className="text-base sm:text-lg font-black tracking-wider text-white">
+                SOLUÇÃO GLOBAL <span className="text-emerald-400">TECH GB</span>
               </span>
-              <p className="text-[10px] text-emerald-400 font-semibold tracking-widest uppercase">IT & AI Global Solutions</p>
+              <p className="text-[10px] text-emerald-400 font-semibold tracking-widest uppercase">Tecnologia & IA</p>
             </div>
           </div>
 
@@ -168,13 +168,13 @@ export default function App() {
             <div className="text-center max-w-3xl mx-auto space-y-6 pt-8">
               <div className="inline-flex items-center space-x-2 bg-emerald-950/60 border border-emerald-500/30 rounded-full px-4 py-1.5 text-xs text-emerald-400 font-medium">
                 <Star className="w-3.5 h-3.5" />
-                <span>GLOBAL SOLUÇÃO TECH GB — Especialistas em IA & Cloud Security</span>
+                <span>SOLUÇÃO GLOBAL TECH GB — Especialistas em IA & Cloud Security</span>
               </div>
               <h1 className="text-4xl sm:text-6xl font-black tracking-tight text-white leading-tight">
-                Engenharia de TI Global com Inovação em <span className="bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent">Google Cloud & IA</span>
+                Engenharia de TI com Inovação em <span className="bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent">Google Cloud & IA</span>
               </h1>
               <p className="text-slate-400 text-lg sm:text-xl font-light leading-relaxed">
-                A <strong>GLOBAL SOLUÇÃO TECH GB</strong> foi fundada na Guiné-Bissau com alcance e padrões internacionais. Fornecemos arquitetura de redes, cibersegurança em nuvem e soluções avançadas de Inteligência Artificial para o mercado global.
+                A <strong>SOLUÇÃO GLOBAL TECH GB</strong> foi fundada na Guiné-Bissau com alcance e padrões internacionais. Fornecemos arquitetura de redes, cibersegurança em nuvem e soluções avançadas de Inteligência Artificial para o mercado global.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
                 <button 
@@ -220,7 +220,7 @@ export default function App() {
                 </div>
                 <h2 className="text-3xl font-bold text-white">Lavi Duarte Indeque</h2>
                 <p className="text-slate-400 text-sm leading-relaxed">
-                  Fundador da <strong>GLOBAL SOLUÇÃO TECH GB</strong>. Com formação internacional no Reino Unido (Leeds City College) e Marrocos (EPSIEL), aliada a uma sólida experiência prática no Ecobank, Lavi combina especialização em redes e infraestruturas críticas com certificações de topo em IA Generativa e Nuvem pela Google Cloud.
+                  Fundador da <strong>SOLUÇÃO GLOBAL TECH GB</strong>. Com formação internacional no Reino Unido (Leeds City College) e Marrocos (EPSIEL), aliada a uma sólida experiência prática no Ecobank, Lavi combina especialização em redes e infraestruturas críticas com certificações de topo em IA Generativa e Nuvem pela Google Cloud.
                 </p>
                 <div className="flex flex-wrap gap-2 pt-2">
                   <span className="bg-slate-800 text-slate-300 text-xs px-3 py-1 rounded-full border border-slate-700">Português (Nativo)</span>
@@ -256,7 +256,7 @@ export default function App() {
         {activeTab === 'services' && (
           <div className="space-y-8">
             <div className="text-center max-w-2xl mx-auto space-y-3">
-              <h1 className="text-3xl font-bold text-white">Catálogo de Serviços — GLOBAL SOLUÇÃO TECH GB</h1>
+              <h1 className="text-3xl font-bold text-white">Catálogo de Serviços — SOLUÇÃO GLOBAL TECH GB</h1>
               <p className="text-slate-400 text-sm">Selecione os serviços de que a sua empresa necessita e adicione ao seu pedido de orçamento instantâneo.</p>
             </div>
 
@@ -323,7 +323,7 @@ export default function App() {
           <div className="space-y-8">
             <div className="text-center max-w-2xl mx-auto space-y-3">
               <h1 className="text-3xl font-bold text-white">Certificações Oficiais Google Cloud</h1>
-              <p className="text-slate-400 text-sm">Garantia técnica de rigor, inovação ética em IA e cibersegurança em ambientes cloud para os projetos da GLOBAL SOLUÇÃO TECH GB.</p>
+              <p className="text-slate-400 text-sm">Garantia técnica de rigor, inovação ética em IA e cibersegurança em ambientes cloud para os projetos da SOLUÇÃO GLOBAL TECH GB.</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -350,7 +350,7 @@ export default function App() {
           <div className="max-w-3xl mx-auto space-y-8">
             <div className="text-center space-y-2">
               <h1 className="text-3xl font-bold text-white">Novo Pedido / Solicitação de Serviço</h1>
-              <p className="text-slate-400 text-sm">Configure os serviços e envie o seu pedido para a GLOBAL SOLUÇÃO TECH GB.</p>
+              <p className="text-slate-400 text-sm">Configure os serviços e envie o seu pedido para a SOLUÇÃO GLOBAL TECH GB.</p>
             </div>
 
             {/* Passos do Checkout */}
@@ -493,7 +493,7 @@ export default function App() {
                   <CheckCircle className="w-10 h-10" />
                 </div>
                 <div className="space-y-2">
-                  <h2 className="text-2xl font-bold text-white">Pedido Registado na GLOBAL SOLUÇÃO TECH GB!</h2>
+                  <h2 className="text-2xl font-bold text-white">Pedido Registado na SOLUÇÃO GLOBAL TECH GB!</h2>
                   <p className="text-slate-400 text-sm">O seu código de acompanhamento único é:</p>
                   <p className="text-3xl font-black text-emerald-400 tracking-wider font-mono">{orderCreated.id}</p>
                 </div>
@@ -533,7 +533,7 @@ export default function App() {
           <div className="max-w-2xl mx-auto space-y-8">
             <div className="text-center space-y-2">
               <h1 className="text-3xl font-bold text-white">Acompanhar Estado do Pedido</h1>
-              <p className="text-slate-400 text-sm">Insira o seu ID de Pedido (ex: GST-123456) ou o e-mail associado para consultar o progresso.</p>
+              <p className="text-slate-400 text-sm">Insira o seu ID de Pedido (ex: SGT-123456) ou o e-mail associado para consultar o progresso.</p>
             </div>
 
             <form onSubmit={handleSearchOrder} className="flex gap-3">
@@ -543,7 +543,7 @@ export default function App() {
                 value={searchOrderId}
                 onChange={e => setSearchOrderId(e.target.value)}
                 className="flex-1 bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
-                placeholder="ID do Pedido (ex: GST-123456) ou E-mail"
+                placeholder="ID do Pedido (ex: SGT-123456) ou E-mail"
               />
               <button 
                 type="submit"
@@ -599,8 +599,8 @@ export default function App() {
       <footer className="border-t border-slate-800/80 bg-slate-950 mt-20 py-12 text-xs text-slate-500">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="space-y-1 text-center md:text-left">
-            <p className="text-slate-300 font-bold text-sm">GLOBAL SOLUÇÃO TECH GB</p>
-            <p>© 2026 GLOBAL SOLUÇÃO TECH GB. Todos os direitos reservados. Guiné-Bissau & Reino Unido.</p>
+            <p className="text-slate-300 font-bold text-sm">SOLUÇÃO GLOBAL TECH GB</p>
+            <p>© 2026 SOLUÇÃO GLOBAL TECH GB. Todos os direitos reservados. Guiné-Bissau & Reino Unido.</p>
           </div>
           <div className="flex space-x-6 text-slate-400">
             <span>Guiné-Bissau (Sede)</span>
