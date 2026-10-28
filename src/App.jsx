@@ -633,11 +633,10 @@ export default function App() {
               <div className="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center">
                 <Mail className="w-5 h-5" />
               </div>
-              <h4 className="font-bold text-white text-sm">E-mails Profissionais</h4>
+              <h4 className="font-bold text-white text-sm">E-mail Corporativo</h4>
               <p className="text-xs text-slate-400">Envie-nos propostas, detalhes de projetos ou faturas:</p>
               <div className="space-y-1 font-mono text-xs">
-                <a href="mailto:laviduarte1992@gmail.com" className="block text-emerald-400 hover:underline">laviduarte1992@gmail.com</a>
-                <a href="mailto:laviduarte1@gmail.com" className="block text-emerald-400 hover:underline">laviduarte1@gmail.com</a>
+                <a href="mailto:lavi.duarte@solucaoglobaltech.com" className="block text-emerald-400 hover:underline">lavi.duarte@solucaoglobaltech.com</a>
               </div>
             </div>
 
