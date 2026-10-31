@@ -750,7 +750,7 @@ export default function App() {
             </div>
           </div>
         </div>
-   {/* 1. SECÇÃO DE PARCEIROS E CLIENTES (Fica antes do rodapé) */}
+  {/* 1. SECÇÃO DE PARCEIROS E CLIENTES */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="bg-slate-900/40 border border-slate-800 rounded-2xl p-8 space-y-6">
           <div className="text-center max-w-xl mx-auto space-y-2">
@@ -800,7 +800,7 @@ export default function App() {
               </div>
 
               <p className="text-slate-400 text-xs leading-relaxed relative z-10">
-                Plataforma web profissional desenvolvida pela SOLUÇÃO GLOBAL TECH GB para apresentar as operações, produtos e loja online da Granja Sintani com elevado desempenho.
+                Plataforma web profissional desenvolvida pela SOLUÇÃO GLOBAL TECH GB para apresentar as operações, produtos e loja online da Granja Sintani com elevado desempenho[cite: 12].
               </p>
 
               {/* Botão de Destaque Animado */}
@@ -862,6 +862,10 @@ export default function App() {
             <a href="https://wa.me/447404550419" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-400">WhatsApp Directo</a>
           </div>
         </div>
+      </footer>
+    </div>
+  );
+}
       </footer>
         </footer>
       </div>          
