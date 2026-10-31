@@ -666,6 +666,70 @@ export default function App() {
           </div>
 
         </div>
+        {/* SECÇÃO: PRINCIPAIS PARCEIROS & CLIENTES */}
+        <div className="bg-slate-900/40 border border-slate-800 rounded-2xl p-8 space-y-6 mt-12">
+          <div className="text-center max-w-xl mx-auto space-y-2">
+            <span className="bg-emerald-950/80 text-emerald-400 text-xs font-semibold px-3 py-1 rounded-full border border-emerald-800/40">
+              Confiança & Credibilidade
+            </span>
+            <h2 className="text-2xl font-bold text-white">Principais Parceiros & Clientes</h2>
+            <p className="text-slate-400 text-sm">Empresas e ecossistemas tecnológicos com os quais a SOLUÇÃO GLOBAL TECH GB colabora.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
+            {/* Cliente Oficial: Granja Sintani */}
+            <div className="bg-slate-950 border border-slate-800 hover:border-emerald-500/50 rounded-xl p-6 transition-all space-y-4">
+              <div className="flex justify-between items-start">
+                <div>
+                  <h3 className="text-lg font-bold text-white">Granja Sintani</h3>
+                  <p className="text-xs text-emerald-400 font-medium">Cliente Oficial • Presença Digital & Web</p>
+                </div>
+                <span className="bg-emerald-500/10 text-emerald-400 text-[10px] px-2.5 py-1 rounded-md border border-emerald-500/20 font-semibold">
+                  Caso de Sucesso
+                </span>
+              </div>
+
+              <p className="text-slate-400 text-xs leading-relaxed">
+                Plataforma web profissional desenvolvida pela SOLUÇÃO GLOBAL TECH GB para apresentar as operações e produtos da Granja Sintani com alto desempenho.
+              </p>
+
+              <div className="pt-2">
+                <a 
+                  href="https://www.granjasintani.com/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center space-x-2 text-xs font-bold text-emerald-400 hover:text-emerald-300 transition-colors"
+                >
+                  <span>Visitar granjasintani.com</span>
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+              </div>
+            </div>
+
+            {/* Parceiro Tecnológico: Google Cloud */}
+            <div className="bg-slate-950 border border-slate-800 hover:border-emerald-500/50 rounded-xl p-6 transition-all space-y-4">
+              <div className="flex justify-between items-start">
+                <div>
+                  <h3 className="text-lg font-bold text-white">Google Cloud Ecosystem</h3>
+                  <p className="text-xs text-emerald-400 font-medium">Parceiro de Tecnologias de IA & Cloud</p>
+                </div>
+                <span className="bg-slate-800 text-slate-300 text-[10px] px-2.5 py-1 rounded-md border border-slate-700 font-semibold">
+                  Certificação Oficial
+                </span>
+              </div>
+
+              <p className="text-slate-400 text-xs leading-relaxed">
+                Infraestrutura de nuvem, modelos de IA Generativa (Gemini) e arquitetura de Cibersegurança validados e certificados oficialmente pela Google Cloud.
+              </p>
+
+              <div className="pt-2">
+                <span className="text-xs font-semibold text-slate-400">
+                  6 Certificações Ativas (2026)
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
       </footer>
     </div>
   );
