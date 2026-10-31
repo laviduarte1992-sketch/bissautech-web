@@ -675,8 +675,7 @@ export default function App() {
             <h2 className="text-2xl font-bold text-white">Principais Parceiros & Clientes</h2>
             <p className="text-slate-400 text-sm">Empresas e ecossistemas tecnológicos com os quais a SOLUÇÃO GLOBAL TECH GB colabora.</p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
             {/* Cliente Oficial: Granja Sintani */}
             <div className="bg-slate-950 border border-slate-800 hover:border-emerald-500/50 rounded-xl p-6 transition-all space-y-4">
               <div className="flex justify-between items-start">
@@ -705,6 +704,7 @@ export default function App() {
                 </a>
               </div>
             </div>
+         
 
             {/* Parceiro Tecnológico: Google Cloud */}
             <div className="bg-slate-950 border border-slate-800 hover:border-emerald-500/50 rounded-xl p-6 transition-all space-y-4">
