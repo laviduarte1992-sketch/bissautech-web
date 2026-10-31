@@ -675,47 +675,102 @@ export default function App() {
             <h2 className="text-2xl font-bold text-white">Principais Parceiros & Clientes</h2>
             <p className="text-slate-400 text-sm">Empresas e ecossistemas tecnológicos com os quais a SOLUÇÃO GLOBAL TECH GB colabora.</p>
           </div>
-{/* Cliente Oficial: Granja Sintani (Com Animação e Destaque) */}
-            <div className="relative group bg-slate-950 border border-emerald-500/30 hover:border-emerald-400 rounded-xl p-6 transition-all duration-300 shadow-lg hover:shadow-emerald-500/10 space-y-4 overflow-hidden">
-              {/* Efeito de Luz / Glow Animado no fundo do cartão */}
-              <div className="absolute -top-12 -right-12 w-24 h-24 bg-emerald-500/10 rounded-full blur-xl group-hover:bg-emerald-500/20 transition-all duration-500"></div>
+{/* SECÇÃO: PRINCIPAIS PARCEIROS & CLIENTES (COM LOGÓTIPO & ANIMAÇÃO) */}
+        <div className="bg-slate-900/40 border border-slate-800 rounded-2xl p-8 space-y-6 mt-12">
+          <div className="text-center max-w-xl mx-auto space-y-2">
+            <span className="bg-emerald-950/80 text-emerald-400 text-xs font-semibold px-3 py-1 rounded-full border border-emerald-800/40">
+              Confiança & Credibilidade
+            </span>
+            <h2 className="text-2xl font-bold text-white">Principais Parceiros & Clientes</h2>
+            <p className="text-slate-400 text-sm">Empresas e ecossistemas tecnológicos com os quais a SOLUÇÃO GLOBAL TECH GB colabora.</p>
+          </div>
 
-              <div className="flex justify-between items-start relative z-10">
-                <div>
-                  <h3 className="text-lg font-bold text-white group-hover:text-emerald-400 transition-colors">
-                    Granja Sintani
-                  </h3>
-                  <p className="text-xs text-emerald-400 font-medium">Cliente Oficial • Presença Digital & Web</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
+            {/* Cliente Oficial: Granja Sintani (Com Logótipo, Animação de Movimento e Brilho) */}
+            <div className="relative group bg-slate-950 border border-emerald-500/40 hover:border-emerald-400 rounded-xl p-6 transition-all duration-300 shadow-lg hover:shadow-emerald-500/20 space-y-4 overflow-hidden">
+              {/* Efeito de Luz / Glow de fundo */}
+              <div className="absolute -top-10 -right-10 w-32 h-32 bg-emerald-500/10 rounded-full blur-2xl group-hover:bg-emerald-500/25 transition-all duration-500"></div>
+
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 relative z-10">
+                <div className="flex items-center space-x-4">
+                  {/* Logótipo Animado (Flutua devagar e tem sombra) */}
+                  <div className="relative flex-shrink-0 animate-bounce transition-transform duration-1000" style={{ animationDuration: '3s' }}>
+                    <div className="w-14 h-14 rounded-full bg-slate-900 border-2 border-emerald-400/50 p-1 flex items-center justify-center overflow-hidden shadow-md shadow-emerald-500/20">
+                      <img 
+                        src="https://www.granjasintani.com/logo.png" 
+                        alt="Granja Sintani Logo" 
+                        className="w-full h-full object-contain"
+                        onError={(e) => {
+                          e.target.onerror = null;
+                          e.target.src = "https://www.granjasintani.com/favicon.ico";
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-bold text-white group-hover:text-emerald-400 transition-colors">
+                      Granja Sintani
+                    </h3>
+                    <p className="text-xs text-emerald-400 font-medium">Cliente Oficial • Presença Digital & Web</p>
+                  </div>
                 </div>
-                
-                {/* Badge com Ponto Piscando (Live / Animação Ping) */}
-                <span className="inline-flex items-center space-x-1.5 bg-emerald-500/10 text-emerald-400 text-[10px] px-2.5 py-1 rounded-md border border-emerald-500/30 font-semibold">
+
+                {/* Badge com Ponto Piscando (Live) */}
+                <span className="inline-flex items-center space-x-1.5 bg-emerald-500/10 text-emerald-400 text-[10px] px-2.5 py-1 rounded-md border border-emerald-500/30 font-semibold self-start sm:self-auto">
                   <span className="relative flex h-2 w-2">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                   </span>
-                  <span>Caso de Sucesso</span>
+                  <span>Projeto Ativo</span>
                 </span>
               </div>
 
               <p className="text-slate-400 text-xs leading-relaxed relative z-10">
-                Plataforma web profissional desenvolvida pela SOLUÇÃO GLOBAL TECH GB para apresentar as operações e produtos da Granja Sintani com alto desempenho.
+                Plataforma web profissional desenvolvida pela SOLUÇÃO GLOBAL TECH GB para apresentar as operações, produtos e loja online da Granja Sintani com elevado desempenho.
               </p>
 
-              {/* Botão de Ação Interativo com Animação */}
+              {/* Botão Chamativo de Destaque com Animação */}
               <div className="pt-2 relative z-10">
                 <a 
                   href="https://www.granjasintani.com/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-between w-full sm:w-auto space-x-3 bg-emerald-500 hover:bg-emerald-400 text-slate-950 px-4 py-2 rounded-lg text-xs font-bold transition-all duration-300 transform group-hover:scale-[1.02] shadow-md hover:shadow-emerald-500/20"
+                  className="inline-flex items-center justify-between w-full space-x-3 bg-emerald-500 hover:bg-emerald-400 text-slate-950 px-4 py-2.5 rounded-lg text-xs font-bold transition-all duration-300 transform group-hover:translate-x-1 shadow-lg shadow-emerald-500/20"
                 >
-                  <span>Ver Projeto Online (granjasintani.com)</span>
-                  <ExternalLink className="w-4 h-4 animate-bounce" />
+                  <span className="flex items-center space-x-2">
+                    <span>🌐</span>
+                    <span>Visitar Site Oficial (granjasintani.com)</span>
+                  </span>
+                  <ExternalLink className="w-4 h-4" />
                 </a>
               </div>
             </div>
-           
+
+            {/* Parceiro Tecnológico: Google Cloud */}
+            <div className="bg-slate-950 border border-slate-800 hover:border-emerald-500/50 rounded-xl p-6 transition-all space-y-4">
+              <div className="flex justify-between items-start">
+                <div>
+                  <h3 className="text-lg font-bold text-white">Google Cloud Ecosystem</h3>
+                  <p className="text-xs text-emerald-400 font-medium">Parceiro de Tecnologias de IA & Cloud</p>
+                </div>
+                <span className="bg-slate-800 text-slate-300 text-[10px] px-2.5 py-1 rounded-md border border-slate-700 font-semibold">
+                  Certificação Oficial
+                </span>
+              </div>
+
+              <p className="text-slate-400 text-xs leading-relaxed">
+                Infraestrutura de nuvem, modelos de IA Generativa (Gemini) e arquitetura de Cibersegurança validados e certificados oficialmente pela Google Cloud.
+              </p>
+
+              <div className="pt-2">
+                <span className="text-xs font-semibold text-slate-400">
+                  6 Certificações Ativas (2026)
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
          
 
             {/* Parceiro Tecnológico: Google Cloud */}
